@@ -1,0 +1,29 @@
+<div class="item">
+  <div class="header">
+    <div class="sizes">
+      <div *ngIf="product.sizes.length > 1; then thenBlock else elseBlock"></div>
+      <ng-template #thenBlock>
+        <select>
+          <option disabled>Size</option>
+          <option *ngFor="let item of product.sizes">{{item}}</option>
+        </select>
+      </ng-template>
+      <ng-template #elseBlock>
+        <span>{{product.sizes[0]}}</span>
+      </ng-template>
+    </div>
+    <div class="colors">
+      <div *ngFor="let item of product.colors" [ngStyle]="{'background-color': item}"></div>
+    </div>
+  </div>
+
+  <a routerLink="/products/{{product.id}}">
+    <div class="image">
+      <img src={{product.imgPath}} alt="Product">
+    </div>
+    <div class="footer">
+      <span class="name">{{product.name}}</span>
+      <span class="price">{{product.price | currencyFormat}}</span>
+    </div>
+  </a>
+</div>

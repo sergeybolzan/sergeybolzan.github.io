@@ -1,0 +1,133 @@
+@font-face{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('Open-Sans'), 
+    url('../fonts/OpenSans-Regular.woff2') format('woff2'), 
+    url('../fonts/OpenSans-Regular.woff') format('woff');
+}
+@font-face{
+    font-family: 'Chiller';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Chiller Regular'), local('Chiller-Regular'),
+    url('../fonts/Chiller-Regular.woff2') format('woff2'),
+    url('../fonts/Chiller-Regular.woff') format('woff');
+}
+    
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    text-align: center;
+    font: 400 16px 'Open Sans', Arial, sans-serif;
+    color: #191313;
+}
+header{
+    background: url(../img/bg3.jpg);
+    background-size: cover;
+    min-height: 100vh;
+}
+header h1{
+    padding-top: 40vh;
+    font-size: 120px;
+    letter-spacing: 3px;
+    color:#dc0404;
+}
+.main_conent{
+    padding: 120px 0 90px;
+}
+.page_title{
+    font: 50px 'Open Sans', Arial, sans-serif;
+    margin-bottom: 50px;
+    line-height: 1.4;
+    font-weight: 700;
+}
+.page_title span{
+    display: block;
+}
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+    width: 100%;
+}
+img{
+    max-width: 800px;
+    margin: 30px auto;
+    display: block;
+}
+.game_authors{
+    padding: 50px 0;
+    background: #0e2d3e;
+    background-size: cover;
+    color: #fff;
+}
+.game_authors p{
+    margin-bottom: 10px;
+}
+.author{
+    width: 40%;
+    margin: 0 50px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.author ul{
+    list-style-type: none;
+}
+.name{
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+.flex_container{
+    display: flex;
+    justify-content: space-between;
+}
+.section_title{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.game_link{
+    color: #2f2a2a;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 50px;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    margin: 50px 0 30px;
+    transition: all ease .2s;
+}
+.game_link:hover,
+.game_link:focus{
+    border-color: #2f2a2a;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+    img{
+        max-width: 90%;
+    }
+    .page_title{
+        font-size: 70px;
+    }
+}
+@media (max-width: 800px){
+    .page_title{
+        font-size: 50px;
+    }
+}
+@media (max-width: 600px){
+    .flex_container{
+        flex-direction: column;
+    }
+    .author{
+        width: 100%;
+        margin: 0 0 30px;
+    }
+}
