@@ -19,7 +19,7 @@ class StartGame extends Component {
 
   handleButtonClick = () => {
     this.props.initCards(this.props.difficultyId);
-    this.props.history.push('game');
+    this.props.history.push('/game');
   }
   
   render() {
