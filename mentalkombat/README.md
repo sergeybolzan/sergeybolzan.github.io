@@ -1,1 +1,0 @@
-# mentalkombat.github.io
